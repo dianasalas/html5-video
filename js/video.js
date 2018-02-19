@@ -1,36 +1,18 @@
-var video;
-var playlist;
-var videos;
-var actual;
 
-init();
-function init(){
-    actual = 0;
-    video = $('video');
-    playlist = $('#playlist');
-    videos = playlist.find('li img  a');
-    len = videos.length - 1;
-    playlist.find('a').click(function(e){
-        e.preventDefault();
-        link = $(this);
-        actual = link.parent().index();
-        run(link, video[0]);
-    });
-    video[0].addEventListener('ended',function(e){
-        actual++;
-        if(actual == len){
-            actual = 0;
-            link = playlist.find('a')[0];
-        }else{
-            link = playlist.find('a')[actual];    
-        }
-        run($(link),video[0]);
-    });
-}
-function run(link, player){
-        player.src = link.attr('href');
-        par = link.parent();
-        par.addClass('active').siblings().removeClass('active');
-        video[0].load();
-        video[0].play();
-}
+$(document).on('click','.active', function (event) {
+    var opcion = $(this);
+    var type = opcion.data('type');
+
+    if(type == 1){
+        $("#Trailer").attr("src","videos/losincreibles2.mp4");
+        $("#Trailer").attr("poster","imgs/li2.jpg");
+    }
+    if(type == 2){
+        $("#Trailer").attr("src","videos/PanteraNegra.mp4");
+        $("#Trailer").attr("poster","imgs/bp.jpg");
+    }
+    if(type == 3){
+        $("#Trailer").attr("src","videos/LaBodaDeValentina.mp4");
+        $("#Trailer").attr("poster","imgs/lbdv.jpg");
+    }
+});

@@ -4,14 +4,15 @@
     <head>
         <title>• Trailers cool •</title>
         <meta charset="utf-8" />
-        <!-- IE=edge" tells Internet Explorer to use the highest mode available to that version of IE -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="Author" content="ech0Server" />
         <meta name="Description" content="Sample for HTML5" />
 
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-        <script src="js/video.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript"  src="js/video.js"></script>
+
     </head>
 
     <body>
@@ -33,11 +34,11 @@
         	<center>-Trailers -</center>
             <aside>
             <center>..Playlist..</center>
-               <ul id="playlist">
-                 <li class="active"><img src="imgs/li2.jpg"><a href="videos/losincreibles.mp4" target="videoclip"> &nbsp;&nbsp;Los Increíbles 2</a></li><br>
-                 <li><img src="imgs/bp.jpg"><a href="videos/pn.mp4" target="video"> &nbsp;&nbsp;Pantera Negra</a></li><br>
-                 <li><img src="imgs/lbdv.jpg"><a href="videos/labodadevalentina.mp4" target="videoclip"> &nbsp;&nbsp;La Boda de Valentina</a></li><br>
-               </ul>
+            <ul id="playlist">                 
+                <li role="presentation"><img src="imgs/li2.jpg"><a class="active" data-type="1" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;Los Increíbles 2</a></li><br>
+                <li role="presentation"><img src="imgs/bp.jpg"><a class="active" data-type="2" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;Pantera Negra</a></li><br>
+                <li role="presentation"><img src="imgs/lbdv.jpg"><a class="active" data-type="3" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;La Boda de Valentina</a></li><br>                
+            </ul>
                 <BR><BR><BR><BR><BR><BR><BR><BR><BR>
             </aside>
 
@@ -45,24 +46,14 @@
 
                 <article>
                     
-                    <video src="videos/losincreibles.mp4"  preload="auto" tabindex="0" width="720" height="404" controls 
-                    poster="imgs/li2.jpg"
-                    id="video"
-                    loop
-                    ></video>
-                    <!--
-                        mp4, ogg, webm
-                    <video src="video/silicon.valley.s01e03.mp4" width="720" height="404" controls poster="imgs/silicon_valley_title.png" id="videoclip"></video>
-                    --> 
-<!--
-                     <video src="video/silicon.valley.s01e03.mp4" width="720" height="404" controls poster="imgs/silicon_valley_title.png" loop></video>
-<video src="video/silicon.valley.s01e03.mp4" width="720" height="404" controls poster="imgs/silicon_valley_title.png" muted autoplay></video>
-                  -->  
+                    <video id="Trailer" class="counter video" src="videos/losincreibles2.mp4"  preload="auto"
+                        tabindex="0" width="720" height="404" controls poster="imgs/li2.jpg" id="video" loop></video>
+                    
                 </article>
             </section>
 
         </div>
-
+        
         <div class="clearfix"></div>
         <footer id="main-footer"><center>&copy; By Dianas<center></footer>
     </body>
