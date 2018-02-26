@@ -10,8 +10,23 @@
         <meta name="Description" content="Sample for HTML5" />
 
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        
+        <!--<link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+        <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+            
+
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script type="text/javascript"  src="js/video.js"></script>
+
+        <style>
+        #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+        </style>
 
     </head>
 
@@ -35,26 +50,32 @@
             <aside>
             <center>..Playlist..</center>
             <ul id="playlist">                 
-                <li role="presentation"><img src="imgs/li2.jpg"><a class="active" data-type="1" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;Los Increíbles 2</a></li><br>
-                <li role="presentation"><img src="imgs/bp.jpg"><a class="active" data-type="2" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;Pantera Negra</a></li><br>
-                <li role="presentation"><img src="imgs/lbdv.jpg"><a class="active" data-type="3" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;La Boda de Valentina</a></li><br>                
+                <li role="presentation"><img id="movie1" src="imgs//li2.jpg" draggable="true" ondragstart="drag(event)"><a class="active" data-type="1" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;Los Increíbles 2</a></li><br>
+                <li role="presentation"><img id="movie2" src="imgs//bp.jpg" draggable="true" ondragstart="drag(event)"><a class="active" data-type="2" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;Pantera Negra</a></li><br>
+                <li role="presentation"><img id="movie3" src="imgs//lbdv.jpg" draggable="true" ondragstart="drag(event)"><a class="active" data-type="3" href="javascript:void(0)" role="menuitem"> &nbsp;&nbsp;La Boda de Valentina</a></li><br>                
+
             </ul>
-                <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+                <BR><BR><BR><BR><BR><BR><BR><BR><BR>
             </aside>
 
             <section id="content">
-
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <article>
                     
-                    <video id="Trailer" class="counter video" src="videos/losincreibles.mp4"  preload="auto" tabindex="0" width="720" height="404" controls poster="imgs/li2.jpg" id="video" loop></video><br><center>
-                    <video src="videos/losincreibles.mp4"  width="500" height="200" controls poster="imgs/li2.jpg" loop></video>
-                    <video src="videos/pn.mp4"  width="500" height="200" controls poster="imgs/bp.jpg" loop></video><br>
-                    <video src="videos/labodadevalentina.mp4"  width="500" height="200" controls poster="imgs/lbdv.jpg" loop></video></center>
+                    <video id="Trailer" class="counter video" src="videos/losincreibles2.mp4"  preload="auto"
+                        tabindex="0" width="720" height="404" controls poster="imgs/li2.jpg" id="video" loop></video>
+                    
                 </article>
+            </div>
             </section>
 
+            
+
         </div>
-        
+        <!-- --------------------------------------------------------------------------------- -->
+
+
+        <!-- --------------------------------------------------------------------------------- -->
         <div class="clearfix"></div>
         <footer id="main-footer"><center>&copy; By Dianas<center></footer>
     </body>
