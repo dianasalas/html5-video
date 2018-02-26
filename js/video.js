@@ -16,3 +16,5 @@ $(document).on('click','.active', function (event) {
         $("#Trailer").attr("poster","imgs/lbdv.jpg");
     }
 });
+
+//drop & drag
