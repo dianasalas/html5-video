@@ -21,9 +21,6 @@ $(document).on('click','.active', function (event) {
             }
         }
     }
-    
-
-    console.log(content);
 });
  
 function allowDrop(ev) {
@@ -36,8 +33,7 @@ function drag(ev) {
 
 function handleFiles(files) {
     var file = files[0];
- 
-    console.log(files);
+
     var reader = new FileReader();
 
     
@@ -68,14 +64,9 @@ function drop(ev) {
             }
         }
     }    
-    
-
-    console.log("drop.......");
  
     var files = ev.dataTransfer.files;
     var count = files.length;
-    
-    console.log(ev.dataTransfer);
 
     if (count > 0)
         handleFiles(files);
