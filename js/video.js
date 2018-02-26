@@ -35,7 +35,8 @@ function handleFiles(files) {
     var file = files[0];
 
     var reader = new FileReader();
-
+    
+    //obtener la direccion del video a la seleccionada
     
     $("#playlist").append("<li role='presentation'>"+
         "<img id='movie4' src='imgs//new.png' draggable='true' ondragstart='drag(event)'>"+
@@ -59,7 +60,8 @@ function drop(ev) {
                 $("#Trailer").attr("src","videos/LaBodaDeValentina.mp4");
                 $("#Trailer").attr("poster","imgs/lbdv.jpg");
             }else{
-                $("#Trailer").attr("src","videos/LaBodaDeValentina.mp4");
+                //Cambiar la direccion del video a la seleccionada
+                $("#Trailer").attr("src","videos/MazeRunner.mp4");
                 $("#Trailer").attr("poster","imgs/new.png");
             }
         }
